@@ -1,0 +1,4 @@
+Kernel: waiting for sources
+Ramdisk L02: not available yet
+Ramdisk L04: H60-L04C151B507
+Ramdisk L12: not available yet
