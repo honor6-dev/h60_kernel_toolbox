@@ -139,7 +139,7 @@ case "$CMD" in
 
         echo -e "${txtylw}Creating boot.img ..."
         echo -e "${txtrst}"
-        mkbootimg --kernel ${TEMP_DIR}/zImage --ramdisk ${TEMP_DIR}/ramdisk.cpio.gz --cmdline "ro.boot.hardware=hi3630 vmalloc=384M coherent_pool=512K mem=2044m@0x200000 psci=enable mmcparts=mmcblk0:p1(vrl),p2(vrl_backup),p7(modemnvm_factory),p18(splash),p22(dfx),p23(modemnvm_backup),p24(modemnvm_img),p25(modemnvm_system),p26(modem),p27(modem_dsp),p28(modem_om),p29(modemnvm_update),p31(3rdmodem),p32(3rdmodemnvm),p33(3rdmodemnvmbkp) user_debug=7 androidboot.selinux=permissive enter_erecovery=0" --base 0x00000000 --kernel_offset 0x00608000 --ramdisk_offset 0x00300000 --second_offset 0x01500000 --tags_offset 0x00200000 -o ${OUT_DIR}/boot.img
+        mkbootimg --kernel ${TEMP_DIR}/zImage --ramdisk ${TEMP_DIR}/ramdisk.cpio.gz --cmdline "ro.boot.hardware=hi3630 vmalloc=384M coherent_pool=512K mem=2044m@0x200000 psci=enable mmcparts=mmcblk0:p1(vrl),p2(vrl_backup),p7(modemnvm_factory),p18(splash),p22(dfx),p23(modemnvm_backup),p24(modemnvm_img),p25(modemnvm_system),p26(modem),p27(modem_dsp),p28(modem_om),p29(modemnvm_update),p31(3rdmodem),p32(3rdmodemnvm),p33(3rdmodemnvmbkp) user_debug=7 androidboot.selinux=permissive enter_erecovery=0" --base 0x00000000 --kernel_offset 0x00608000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00200000 -o ${OUT_DIR}/boot.img
         
         echo -e "${txtgrn}Done! -> ${OUT_DIR}/boot.img"
         echo -e "${txtrst}"
