@@ -34,7 +34,7 @@ on fs
     export ANDROID_STORAGE ""
 
     wait /dev/block/platform/hi_mci.0/by-name/system
-    mount ext4 /dev/block/platform/hi_mci.0/by-name/system /system ro
+    mount ext4 /dev/block/platform/hi_mci.0/by-name/system /system rw
     mount ext4 /dev/block/platform/hi_mci.0/by-name/cache /cache
     wait /dev/block/platform/hi_mci.0/by-name/userdata
     mount_all /fstab.hi3630
